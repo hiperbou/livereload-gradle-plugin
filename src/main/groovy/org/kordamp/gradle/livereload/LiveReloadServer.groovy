@@ -15,7 +15,7 @@
  */
 package org.kordamp.gradle.livereload
 
-import net_alchim31_livereload.LRServer
+import net.alchim31.livereload.LRServer
 
 import java.nio.file.FileSystems
 import java.nio.file.Path
@@ -26,14 +26,16 @@ import java.nio.file.Path
 class LiveReloadServer {
     private final int port
     private final String docRoot
+    private final int delay
 
-    LiveReloadServer(int port, String docRoot) {
+    LiveReloadServer(int port, String docRoot, int delay) {
         this.port = port
         this.docRoot = docRoot
+        this.delay = delay
     }
 
     void run() {
         Path docroot = FileSystems.default.getPath(docRoot)
-        new LRServer(port, docroot).run()
+        new LRServer(port, docroot, delay).run()
     }
 }

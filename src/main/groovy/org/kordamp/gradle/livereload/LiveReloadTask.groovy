@@ -31,6 +31,7 @@ class LiveReloadTask extends DefaultTask {
 
     @Optional @Input String docRoot
     @Input Integer port
+    @Input Integer delay
     LiveReloadServer liveReloadServer
 
     LiveReloadTask() {
@@ -54,7 +55,7 @@ class LiveReloadTask extends DefaultTask {
 
         println("Enabling LiveReload at port $port for $docRoot")
 
-        liveReloadServer = liveReloadServer ?: new LiveReloadServer(port, docRoot)
+        liveReloadServer = liveReloadServer ?: new LiveReloadServer(port, docRoot, delay)
         liveReloadServer.run()
     }
 }

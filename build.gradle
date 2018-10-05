@@ -37,11 +37,12 @@ apply plugin: 'build-dashboard'
 
 repositories {
     jcenter()
+    maven { url "https://jitpack.io" }
 }
 
 dependencies {
     compile gradleApi()
-    compile 'net.alchim31:livereload-jvm:0.2.0'
+    compile 'com.github.hiperbou:livereload-jvm:master-SNAPSHOT'
     testCompile 'junit:junit:4.11'
     testCompile('org.spockframework:spock-core:0.7-groovy-2.0') {
         exclude group: 'org.codehaus.groovy', module: 'groovy-all'
