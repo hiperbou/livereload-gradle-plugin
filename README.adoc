@@ -53,3 +53,4 @@ This plugin can be used in combination with any task that produces content that 
 plugin detects if the {asciidoctor-gradle-plugin}[asciidoctor-gradle-plugin] is installed, automatically configuring
 the `outputDir` of the `asciidoctor` task as the `docRoot`. This setting can be overridden by user input of course.
 
+
