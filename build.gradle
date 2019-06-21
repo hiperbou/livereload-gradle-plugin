@@ -42,7 +42,7 @@ repositories {
 
 dependencies {
     compile gradleApi()
-    compile 'com.github.hiperbou:livereload-jvm:master-SNAPSHOT'
+    compile 'com.github.hiperbou:livereload-jvm:0.3.0'
     testCompile 'junit:junit:4.11'
     testCompile('org.spockframework:spock-core:0.7-groovy-2.0') {
         exclude group: 'org.codehaus.groovy', module: 'groovy-all'
